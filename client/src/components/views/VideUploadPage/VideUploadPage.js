@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Typography, Button, Form, message, Input, Icon } from "antd";
-import TextArea from "antd/lib/input/TextArea";
+// import TextArea from "antd/lib/input/TextArea";
 import Dropzone from "react-dropzone";
 import Axios from 'axios';
 import { useSelector } from "react-redux";
 
-
-//const { TextArea } = Input;
+const { TextArea } = Input;
 const { Title } = Typography;
 
 const PrivateOptions = [
@@ -21,7 +20,7 @@ const CategoryOptions = [
   { value: 3, label: "Pets & Animals" },
 ];
 
-function VideUploadPage() {
+function VideUploadPage(props) {
   const user = useSelector(state => state.user);
   const [Videotitle, setVideoTitle] = useState("");
   const [Description, setDescription] = useState("");
@@ -71,7 +70,6 @@ function VideUploadPage() {
                 Axios.post('/api/video/thumbnail', variable)
                     .then(response=> {
                         if(response.data.success){
-
                             setDuration(response.data.fileDuration);
                             setThumbnailPath(response.data.url);
                             
@@ -106,7 +104,13 @@ function VideUploadPage() {
     Axios.post('/api/video/uploadVideo', variables)
       .then(response=>{
         if(response.data.success){
+              message.success('업로드 성공')
 
+              setTimeout( ()=> {
+                props.history.push('/')
+              }, 3000);
+
+            
         }else{
           alert('비디오 업로드 실패')
         }
@@ -122,19 +126,12 @@ function VideUploadPage() {
       <Form onSubmit={onSubmit}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           {/*영상추가*/}
-          <Dropzone onDrop={onDrop}
+          <Dropzone 
+          onDrop={onDrop}
            multiple={false} 
-           maxSize={100000000}>
+           maxSize={800000000}>
             {({ getRootProps, getInputProps }) => (
-              <div
-                style={{
-                  width: "300px",
-                  height: "240px",
-                  border: "1px solid lightgray",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
+              <div style={{width: "300px",height: "240px",border: "1px solid lightgray",display: "flex",alignItems: "center",justifyContent: "center",}}
                 {...getRootProps()}
               >
                 <input {...getInputProps()} />
@@ -144,20 +141,20 @@ function VideUploadPage() {
           </Dropzone>
 
           {/*썸네일*/}
-          {ThumbnailPath &&
+          {ThumbnailPath !== "" &&
           <div>
-            <img scr={'http://localhost:5000/${ThumbnailPath}'} alt="Thumbnail"></img>
+            <img scr={`http://localhost:5000/${ThumbnailPath}`} alt="thumbnail"></img>
           </div>
         }
         </div>
         <br />
         <br />
         <label>Title</label>
-        <input onChange={onTitleChange} value={Videotitle} />
+        <Input onChange={onTitleChange} value={Videotitle} />
         <br />
         <br />
         <label>Description</label>
-        <textarea onChange={onDescriptionChange} value={Description} />
+        <TextArea onChange={onDescriptionChange} value={Description} />
         <br />
         <br />
         <select onChange={onPrivateChange}>
