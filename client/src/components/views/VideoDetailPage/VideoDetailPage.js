@@ -1,35 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import { List, Avatar, Row, Col } from 'antd';
-import axios from 'axios';
-function VideoDetailPage() {
+import React, { useEffect, useState } from "react";
+import { List, Avatar, Row, Col } from "antd";
+import axios from "axios";
+import Axios from "axios";
+
+
+
+function VideoDetailPage(props) {
+  const videoId = props.match.params.videoId;
+  const variable = { videoId: videoId };
+
+  const [VideoDetail, setVideoDetail] = useState([]);
+
+  useEffect(() => {
+    Axios.post("/api/video/getVideoDetail", variable).then((response) => {
+      if (response.data.success) {
+        setVideoDetail(response.data.videoDetail);
+      } else {
+        alert("정보를 가져올수 없습니다");
+      }
+    });
+  }, []);
+
+  if (VideoDetail.writer) {
     return (
-        <Row>
+      <Row gutter={[16, 16]}>
         <Col lg={18} xs={24}>
-            <div className="postPage" style={{ width: '100%', padding: '3rem 4em' }}>
-                <video style={{ width: '100%' }} src={`http://localhost:5000/${Video.filePath}`} controls></video>
+          <div style={{ width: "100%", padding: "3rem 4em" }}>
+            <video
+              style={{ width: "100%" }}
+              src={`http://localhost:5000/${VideoDetail.filePath}`}
+              controls
+            ></video>
 
-                <List.Item
-                    actions={[<LikeDislikes video videoId={videoId} userId={localStorage.getItem('userId')}  />, <Subscriber userTo={Video.writer._id} userFrom={localStorage.getItem('userId')} />]}
-                >
-                    <List.Item.Meta
-                        avatar={<Avatar src={Video.writer && Video.writer.image} />}
-                        title={<a href="https://ant.design">{Video.title}</a>}
-                        description={Video.description}
-                    />
-                    <div></div>
-                </List.Item>
+            <List.Item actions>
+              <List.Item.Meta
+                avatar={
+                  <Avatar
+                    src={VideoDetail.writer && VideoDetail.writer.image}
+                  />
+                }
+                title={VideoDetail.writer.name}
+                description={VideoDetail.description}
+              />
+            </List.Item>
 
-                <Comments CommentLists={CommentLists} postId={Video._id} refreshFunction={updateComment} />
-
-            </div>
+            {/*커멘트 */}
+          </div>
         </Col>
         <Col lg={6} xs={24}>
-
-            <SideVideo />
-
+          sidevideo
         </Col>
-    </Row>
-)
+      </Row>
+    );
+  }else{
+      return(
+      <div>..로딩</div>
+      )
+  }
 }
 
-export default VideoDetailPage
+export default VideoDetailPage;

@@ -10,6 +10,12 @@
 
 👨‍💻 배운것 
 
+  ✔ Axios & Router 흐름 
+      1. client : Axios.post('../경로', 정보) server로 보낸다 
+      2. server  : rouster.post('경로', ...) 클라이언트로 받아 DB 에서 정보를 
+          찾고 찾은 정보를 client로 전달한다
+      3. client : server로 부터 받은정보를 State 에 저장하여 사용한다.
+
   ✔ 몽고DB 정보저장 과정 
     client : Redux 에서 객체 정보를 가져와 server 로 넘겨준다 
     server : 정보를 받기위해 model 을 만을어 놓고 라우터를 이용해 받은 정보(req.body)를 모델에 저장한다  
@@ -41,6 +47,7 @@
                 props.history.push('/')
               }, 3000);
 
+  ✔ useEffect ( ()=> { Dom 이 로드되면 해야할일 ... })
 
   ✔404페이지 처리 
     App.js 
@@ -52,11 +59,33 @@
 
       *<Switch> 컴포넌트를 사용하면 그 하위에 있는 <Route> 컴포넌트 중에 매치되는 제일 첫번째 컴포넌트만 보여 wnsek
 
+ 🚫마주친 오류들 
 
-  
-🚫마주친 오류들 
-
- ✔GET http://localhost:3000/api/video/getVideos 504 (Gateway Timeout
- 원인: Axios.post('....')로 클라이언트에서 보내준것을 
+ ✔ GET http://localhost:3000/api/video/getVideos 504 (Gateway Timeout)
+ 원인: Axios.post('....')로 클라이언트에서 서버로 보내준것을 
       서버에서  router.get('...') 으로 받고있었다 
        get-> post로 수정 
+
+ ✔ SyntaxError: Cannot use import statement outside a module
+
+  
+ ✔ index.js:1 Warning: Each child in a list should have a unique "key" prop.
+ 원인 :리액트에서 반복이 되는 child 같은 경우에는 그 하나의 child마다 고유의 값을 갖고 있어한다 
+ -LandingPage.js 
+
+ const renderCards = Video.map((video, index) => {
+   ...
+  <Col lg={6} md={8} xs={24} key={index}>
+  ...
+
+ 근본원인 : 하지만 내문제는 코드가 다른태그 내부로 잘못 작성되어난 오류였다 
+
+
+
+
+ 
+
+
+
+
+       
