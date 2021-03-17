@@ -113,62 +113,60 @@ function VideUploadPage(props) {
       <div className="title">
         <h2> 업로드할 비디오를 등록해주세요</h2>
       </div>
-      
+
       <Form onSubmit={onSubmit}>
-      <div className="contents">
-                  <div className="dropzone">
-                        {/*영상추가*/}
-                        <Dropzone onDrop={onDrop} multiple={false} maxSize={800000000}>
-                          {({ getRootProps, getInputProps }) => (
-                                <div
-                                  style={{
-                                    width: "300px",
-                                    height: "240px",
-                                    border: "1px solid lightgray",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                  }}
-                                  {...getRootProps()}
-                                >
-                                  <input {...getInputProps()} />
-                                  <Icon
-                                    type="plus"
-                                    className="add"
-                                    style={{ fontSize: "2rem" }}
-                                  />
-                                </div>
-                          )}
-                        </Dropzone>
-                    </div>
-                      <div className="info">
-                        <label>제목</label>
-                        <Input onChange={onTitleChange} value={Videotitle} />
+        <div className="contents">
+          <div className="dropzone">
+            {/*영상추가*/}
+            <Dropzone onDrop={onDrop} multiple={false} maxSize={800000000}>
+              {({ getRootProps, getInputProps }) => (
+                <div
+                  style={{
+                    width: "300px",
+                    height: "240px",
+                    border: "1px solid lightgray",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                  {...getRootProps()}
+                >
+                  <input {...getInputProps()} />
+                  <Icon
+                    type="plus"
+                    className="add"
+                    style={{ fontSize: "2rem" }}
+                  />
+                </div>
+              )}
+            </Dropzone>
+          </div>
+          <div className="info">
+            <label>제목</label>
+            <Input onChange={onTitleChange} value={Videotitle} />
 
-                        <label>설명</label>
-                        <TextArea onChange={onDescriptionChange} value={Description} />
+            <label>설명</label>
+            <TextArea onChange={onDescriptionChange} value={Description} />
 
-                        <label>공개범위</label>
-                        <select onChange={onPrivateChange}>
-                          {PrivateOptions.map((item, index) => (
-                            <option key={index} value={item.value}>
-                              {item.label}
-                            </option>
-                          ))}
-                        </select>
+            <label>공개범위</label>
+            <select onChange={onPrivateChange}>
+              {PrivateOptions.map((item, index) => (
+                <option key={index} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
 
-                        <label>과목</label>
-                        <select onChange={onCategoryChange}>
-                          {CategoryOptions.map((item, index) => (
-                            <option key={index} value={item.value}>
-                              {item.label}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-              </div>
-         
-       
+            <label>과목</label>
+            <select onChange={onCategoryChange}>
+              {CategoryOptions.map((item, index) => (
+                <option key={index} value={item.value}>
+                  {item.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
 
         <br />
         <br />

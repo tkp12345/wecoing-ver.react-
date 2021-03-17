@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&family=Righteous&display=swap');
-*{
-  font-family: 'Jua', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Righteous&display=swap");
+* {
+  font-family: "Jua", sans-serif;
   letter-spacing: 1px;
 }
 body {
@@ -25,7 +25,6 @@ body {
   color: #24292e;
   background-color: #fff;
   background: linear-gradient(to right, #11998e, #38ef7d);
-  
 }
 
 .app {

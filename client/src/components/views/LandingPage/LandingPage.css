@@ -30,7 +30,6 @@
   padding-top: 30px;
   width: 100%;
   height: 500px;
-   
 }
 
 .carousel-item img {
@@ -40,21 +39,21 @@
   box-shadow: 0px 8px 4px #5252526e;
 }
 
-.project-title{
-    width: 85%;
-    margin-bottom: 10px;
-    margin:3rem auto;
+.project-title {
+  width: 85%;
+  margin-bottom: 10px;
+  margin: 3rem auto;
 }
 
-.project-title  h2{
-    font-size: 2.1rem;
-    color:rgba(255, 255, 255, 0.692);
+.project-title h2 {
+  font-size: 2.1rem;
+  color: rgba(255, 255, 255, 0.692);
 }
 
-.project-title  h2 span{
-    margin-left: 10px;
-    margin-bottom: 20px;
-    font-size: 1.6rem;
+.project-title h2 span {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
 }
 
 .section .project-title .ant-row .ant-col {
@@ -63,7 +62,7 @@
   border-radius: 25px;
   background: rgba(211, 211, 211, 0.664);
   border: 9px solid rgba(255, 255, 255, 0.836);
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 35px r gba(0, 0, 0, 0.4);
   transition: 0.5s;
 }
 
@@ -71,24 +70,18 @@
   transform: translateY(-10px);
 }
 
-.section .project-title  .ant-row .ant-col img {
+.section .project-title .ant-row .ant-col img {
   border-radius: 18px;
 }
- 
 
-@media  screen and (max-width: 844px)
-{
-    .carousel.slide {
-    top:-30px;
-    }
-    
+@media screen and (max-width: 844px) {
+  .carousel.slide {
+    top: -30px;
+  }
 }
 
-@media screen and (max-width: 480px)
-{
-    .car{
+@media screen and (max-width: 480px) {
+  .car {
     display: none;
-    }
-    
+  }
 }
-

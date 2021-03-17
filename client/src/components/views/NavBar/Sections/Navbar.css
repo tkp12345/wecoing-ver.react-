@@ -1,11 +1,10 @@
-@import '~antd/dist/antd.css';
-@import url('https://fonts.googleapis.com/css2?family=Jua&family=Righteous&display=swap');
-*{
-  font-family: 'Jua', sans-serif;
+@import "~antd/dist/antd.css";
+@import url("https://fonts.googleapis.com/css2?family=Jua&family=Righteous&display=swap");
+* {
+  font-family: "Jua", sans-serif;
 }
 
 .menu {
-  
   padding: 0 20px;
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
@@ -33,14 +32,11 @@
 .menu__container .ant-menu-item {
   padding: 0px 5px;
   font-size: 18px;
-  
 }
 
 .menu__container .ant-menu-submenu-title {
   padding: 10px 20px;
   font-size: 18px;
-  
-  
 }
 
 .menu__container .ant-menu-item a,
@@ -67,13 +63,13 @@
   margin-top: 8px;
   display: none !important; /* use of important to overwrite ant-btn */
   background: #aaaaaaa6;
-  transition:0.5s;
-  border: 2px solid #aaaaaaa6 ;
+  transition: 0.5s;
+  border: 2px solid #aaaaaaa6;
 }
 
 .menu__mobile-button:hover {
   background: #58d348a6;
-  border: 2px solid #58d348a6 ;
+  border: 2px solid #58d348a6;
 }
 
 .menu_drawer .ant-drawer-body {
@@ -84,8 +80,6 @@
 .menu_drawer .ant-drawer-header {
   padding: 14px 24px !important;
 }
-
-
 
 @media (max-width: 767px) {
   .menu__mobile-button {

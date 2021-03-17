@@ -5,7 +5,7 @@ import moment from "moment";
 import Axios from "axios";
 /*css*/
 import "../LandingPage/LandingPage.css";
- 
+
 import Carousel_slider from "./Carousel.js";
 
 const { Title } = Typography;
@@ -56,10 +56,13 @@ function LandingPage() {
           title={video.title}
           description=""
         />
-        <span>{"게시자: "+video.writer.name}  </span>
+        <span>{"게시자: " + video.writer.name} </span>
         <br />
         {/* <span style={{ marginLeft: "3rem" }}> {video.views}</span>-{" "} */}
-        <span> {moment(video.createdAt).format("게시일: "+'MM/DD/YYYY')} </span>
+        <span>
+          {" "}
+          {moment(video.createdAt).format("게시일: " + "MM/DD/YYYY")}{" "}
+        </span>
       </Col>
     );
   });
@@ -71,7 +74,9 @@ function LandingPage() {
       </div>
       <div className="section">
         <div className="project-title">
-          <h2>진행중인 프로젝트<span>👩‍🏫</span> </h2>
+          <h2>
+            진행중인 프로젝트<span>👩‍🏫</span>{" "}
+          </h2>
           <Row gutter={[32, 16]}>
             {renderCards}
 
