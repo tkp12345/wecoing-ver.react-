@@ -29,7 +29,7 @@
   box-sizing: border-box;
   padding-top: 30px;
   width: 100%;
-  height: 600px;
+  height: 500px;
    
 }
 
@@ -60,7 +60,6 @@
 .section .project-title .ant-row .ant-col {
   margin: 10px;
   background: rgb(117, 117, 117);
-
   border-radius: 25px;
   background: rgba(211, 211, 211, 0.664);
   border: 9px solid rgba(255, 255, 255, 0.836);

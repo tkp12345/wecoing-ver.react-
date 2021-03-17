@@ -56,10 +56,10 @@ function LandingPage() {
           title={video.title}
           description=""
         />
-        <span>{video.writer.name} </span>
+        <span>{"게시자: "+video.writer.name}  </span>
         <br />
-        <span style={{ marginLeft: "3rem" }}> {video.views}</span>-{" "}
-        <span> {moment(video.createdAt).format("MMM Do YY")} </span>
+        {/* <span style={{ marginLeft: "3rem" }}> {video.views}</span>-{" "} */}
+        <span> {moment(video.createdAt).format("게시일: "+'MM/DD/YYYY')} </span>
       </Col>
     );
   });
