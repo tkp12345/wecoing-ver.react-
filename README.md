@@ -1,5 +1,5 @@
 📕사용라이브러리 
-
+---
 -dropzone (파일 저장)
 <br>
 -multer (노드서버 파일저장)
@@ -9,7 +9,7 @@
 
 
 👨‍💻 배운것 
-
+---
   ✔ Axios & Router 흐름 
       1. client : Axios.post('../경로', 정보) server로 보낸다 
       2. server  : rouster.post('경로', ...) 클라이언트로 받아 DB 에서 정보를 
@@ -60,6 +60,20 @@
       *<Switch> 컴포넌트를 사용하면 그 하위에 있는 <Route> 컴포넌트 중에 매치되는 제일 첫번째 컴포넌트만 보여 wnsek
 
  🚫마주친 오류들 
+ ---
+  ✔  Invalid Hook Call Error(-LandingPage.js 에 Calousel.js 컴포넌트 추가시)
+       
+       원인 
+        1. Mismatching Versions of React and React DOM
+          =>리액트 버전이 16.8 보다 높아야 훅 사용시 에러가 안생긴다
+
+        2. Breaking the Rules of Hooks
+          =>Hooks를 호출 할 때는 함수형 component의 최상위 부분에서 호출해야 한다.
+
+      ✔ (원인)3. Duplicate React
+         => Hooks이 제대로 작동하려면 내 어플리케이션의 코드의 import와     react-dom의 import가 같은 모듈로 해석되어야 한다
+
+
 
  ✔ GET http://localhost:3000/api/video/getVideos 504 (Gateway Timeout)
  원인: Axios.post('....')로 클라이언트에서 서버로 보내준것을 

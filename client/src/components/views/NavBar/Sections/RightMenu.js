@@ -15,7 +15,7 @@ function RightMenu(props) {
       if (response.status === 200) {
         props.history.push("/login");
       } else {
-        alert('Log Out Failed')
+        alert('로그 아웃에 실패했습니다')
       }
     });
   };
@@ -24,21 +24,22 @@ function RightMenu(props) {
     return (
       <Menu mode={props.mode}>
         <Menu.Item key="mail">
-          <a href="/login">Signin</a>
+          <a href="/login">로그인</a>
         </Menu.Item>
         <Menu.Item key="app">
-          <a href="/register">Signup</a>
+          <a href="/register">회원가입</a>
         </Menu.Item>
       </Menu>
     )
   } else {
+    /*로그인 성공 */
     return (
       <Menu mode={props.mode}>
          <Menu.Item key="upload">
-          <a href="/video/upload">Video</a>
+          <a href="/video/upload">비디오 업로드</a>
         </Menu.Item>  
         <Menu.Item key="logout">
-          <a onClick={logoutHandler}>Logout</a>
+          <a onClick={logoutHandler}>로그아웃</a>
         </Menu.Item>
       </Menu>
     )

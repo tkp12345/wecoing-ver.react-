@@ -1,0 +1,93 @@
+.container {
+}
+.section {
+  position: static;
+  overflow: hidden;
+}
+.carousel-inner {
+  overflow: hidden;
+}
+.carousel-item {
+  opacity: 0;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+.carousel-item img {
+  position: absolute;
+}
+.active {
+  opacity: 1;
+}
+.carousel.slide {
+  padding-top: 0px;
+}
+.carousel {
+  top: 0px;
+  box-sizing: border-box;
+  padding-top: 30px;
+  height: 400px;
+}
+
+.carousel-item img {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+  box-shadow: 0px 8px 4px #5252526e;
+}
+
+.project-title{
+    width: 85%;
+    margin-bottom: 10px;
+    margin:3rem auto;
+}
+
+.project-title  h2{
+    font-size: 2.1rem;
+    color:rgba(255, 255, 255, 0.692);
+}
+
+.project-title  h2 span{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.ant-row .ant-col {
+  margin: 10px;
+  background: rgb(117, 117, 117);
+
+  border-radius: 25px;
+  background: rgba(211, 211, 211, 0.664);
+  border: 9px solid rgba(255, 255, 255, 0.836);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+.ant-row .ant-col:hover {
+  transform: translateY(-10px);
+}
+
+.ant-row .ant-col img {
+  border-radius: 18px;
+}
+ 
+
+@media  screen and (max-width: 844px)
+{
+    .carousel.slide {
+    top:-30px;
+    }
+    
+}
+
+@media screen and (max-width: 480px)
+{
+    .car{
+    display: none;
+    }
+    
+}
+
