@@ -142,6 +142,13 @@
 ```
 
  근본원인 : 하지만 내문제는 코드가 다른태그 내부로 잘못 작성되어난 오류였다
+ 
+
+  참고
+ ---
+ https://github.com/jaewonhimnae/boilerplate-mern-stack
+ https://github.com/dropzone/dropzone
+ 
 
  
 
