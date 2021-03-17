@@ -25,7 +25,7 @@ function VideUploadPage(props) {
   const [Videotitle, setVideoTitle] = useState("");
   const [Description, setDescription] = useState("");
   const [privacy, setPrivacy] = useState(0);
-  const [Category, setCategory] = useState("Film & Animation");
+  const [Category, setCategory] = useState("백앤드");
   const [FilePath, setFilePath] = useState("");
   const [Duration, setDuration] = useState("");
   const [ThumbnailPath, setThumbnailPath] = useState("");

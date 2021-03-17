@@ -2,7 +2,15 @@
 ---
 ```
 1. git clone ...
-2. c:\..\..> npm run dev
+2. server\config\dev.js 추가 >
+ dev.js)
+    module.exports={
+    mongoURI:'mongodb+srv://몽고디비클러스터 아이디, 비밀번호
+   }
+
+3.
+ 터미널) 
+ c:\..\..> npm run dev
 ```
 ---
 버전정보
@@ -146,7 +154,7 @@
 
   참고
  ---
- https://github.com/jaewonhimnae/boilerplate-mern-stack
+ https://github.com/jaewonhimnae/boilerplate-mern-stack<br>
  https://github.com/dropzone/dropzone
  
 

@@ -61,3 +61,32 @@ input.error {
   fontweight: 500;
   lineheight: 12px;
 }
+
+.footer {
+  border-top: 1px solid rgb(129, 129, 129);
+  background-color: rgba(73, 73, 73, 0.329);
+  color: rgba(73, 73, 73, 0.856);
+  padding: 1rem 0;
+  margin: 1rem 0 0 0;
+}
+.inner {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  overflow: hidden;
+  margin-bottom: 18px;
+  /* border: 2px solid red; */
+}
+.footer-message {
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+.footer-contact {
+  font-size: 0 0.5rem;
+}
+
+.footer-copyright {
+  font-size: 0.9rem 0.5rem;
+}

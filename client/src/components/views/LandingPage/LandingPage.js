@@ -4,8 +4,8 @@ import { Card, Avatar, Col, Typography, Row } from "antd";
 import moment from "moment";
 import Axios from "axios";
 /*css*/
-// import "../LandingPage/LandingPage.css";
-/*Component*/
+import "../LandingPage/LandingPage.css";
+ 
 import Carousel_slider from "./Carousel.js";
 
 const { Title } = Typography;

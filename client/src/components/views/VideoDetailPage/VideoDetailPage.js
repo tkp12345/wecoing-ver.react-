@@ -25,9 +25,9 @@ function VideoDetailPage(props) {
     return (
       <Row gutter={[16, 16]}>
         <Col lg={18} xs={24}>
-          <div style={{ width: "100%", padding: "3rem 4em" }}>
+          <div style={{marginLeft:"10vw" , width: "100%", padding: "3rem 4em" }}>
             <video
-              style={{ width: "100%" }}
+              style={{  width: "100%" }}
               src={`http://localhost:5000/${VideoDetail.filePath}`}
               controls
             ></video>
@@ -47,9 +47,8 @@ function VideoDetailPage(props) {
             {/*커멘트 */}
           </div>
         </Col>
-        <Col lg={6} xs={24}>
-          sidevideo
-        </Col>
+        {/* <Col lg={6} xs={24}>
+        </Col> */}
       </Row>
     );
   }else{
