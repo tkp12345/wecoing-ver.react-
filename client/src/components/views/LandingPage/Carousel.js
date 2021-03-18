@@ -11,19 +11,19 @@ function Carousel_slider() {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} className="carousel">
       <Carousel.Item>
-        <img src="img/wecoding_carousel1.png" alt="First slide" />
+        <img src="img/wecoding_carousel1.jpg" alt="First slide" />
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src="img/wecoding_carousel2.png" alt="Second slide" />
+        <img src="img/wecoding_carousel2.jpg" alt="Second slide" />
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src="img/wecoding_carousel3.png" alt="Third slide" />
+        <img src="img/wecoding_carousel3.jpg" alt="Third slide" />
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src="img/wecoding_carousel4.png" alt="Third slide" />
+        <img src="img/wecoding_carousel4.jpg" alt="Third slide" />
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
     </Carousel>
