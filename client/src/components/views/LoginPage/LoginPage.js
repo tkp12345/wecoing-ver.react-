@@ -4,6 +4,7 @@ import { loginUser } from "../../../_actions/user_actions";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { Form, Icon, Input, Button, Checkbox, Typography } from "antd";
+//리덕스 사용 (src/_actions/user_action.js)
 import { useDispatch } from "react-redux";
 
 const { Title } = Typography;
@@ -31,11 +32,11 @@ function LoginPage(props) {
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-          .email("Email is invalid")
-          .required("Email is required"),
+          .email("이메일이 틀렸습니다")
+          .required("이메일이 필요합니다"),
         password: Yup.string()
-          .min(6, "Password must be at least 6 characters")
-          .required("Password is required"),
+          .min(6, "비밀번호는 6글자까지 가능합니다")
+          .required("비밀번호가 필요합니다"),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -53,13 +54,14 @@ function LoginPage(props) {
                 } else {
                   localStorage.removeItem("rememberMe");
                 }
+                //로그인 페이지 이동 
                 props.history.push("/");
               } else {
-                setFormErrorMessage("Check out your Account or Password again");
+                setFormErrorMessage("당신의 계정, 비밀번호를 다시 확인해주세요");
               }
             })
             .catch((err) => {
-              setFormErrorMessage("Check out your Account or Password again");
+              setFormErrorMessage("당신의 계정, 비밀번호를 다시 확인해주세요");
               setTimeout(() => {
                 setFormErrorMessage("");
               }, 3000);

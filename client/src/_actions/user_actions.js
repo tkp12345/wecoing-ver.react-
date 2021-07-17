@@ -7,6 +7,7 @@ export function registerUser(dataToSubmit) {
     .post(`${USER_SERVER}/register`, dataToSubmit)
     .then((response) => response.data);
 
+  //리듀서 전달 
   return {
     type: REGISTER_USER,
     payload: request,
@@ -24,6 +25,7 @@ export function loginUser(dataToSubmit) {
   };
 }
 
+//사용자 인증 
 export function auth() {
   const request = axios
     .get(`${USER_SERVER}/auth`)

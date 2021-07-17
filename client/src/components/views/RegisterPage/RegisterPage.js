@@ -42,17 +42,17 @@ function RegisterPage(props) {
         confirmPassword: "",
       }}
       validationSchema={Yup.object().shape({
-        name: Yup.string().required("Name is required"),
-        lastName: Yup.string().required("Last Name is required"),
+        name: Yup.string().required("이름을 입력해주세요"),
+        lastName: Yup.string().required("성을 입력해주세요"),
         email: Yup.string()
-          .email("Email is invalid")
-          .required("Email is required"),
+          .email("이메일이 틀렸습니다")
+          .required("이메일을 입력해주세요"),
         password: Yup.string()
-          .min(6, "Password must be at least 6 characters")
-          .required("Password is required"),
+          .min(6, "비밀번호는 최소 6글자 입니다")
+          .required("비밀번호를 입력해주세요"),
         confirmPassword: Yup.string()
-          .oneOf([Yup.ref("password"), null], "Passwords must match")
-          .required("Confirm Password is required"),
+          .oneOf([Yup.ref("password"), null], "비밀번호가 일치합니다")
+          .required("재비밀번호를 입력해주세요"),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -64,6 +64,7 @@ function RegisterPage(props) {
             image: `http://gravatar.com/avatar/${moment().unix()}?d=identicon`,
           };
 
+          
           dispatch(registerUser(dataToSubmit)).then((response) => {
             if (response.payload.success) {
               props.history.push("/login");

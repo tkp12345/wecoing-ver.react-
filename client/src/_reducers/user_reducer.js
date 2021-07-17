@@ -5,11 +5,13 @@ import {
   LOGOUT_USER,
 } from "../_actions/types";
 
+//state 리턴 함수 
 export default function (state = {}, action) {
   switch (action.type) {
     case REGISTER_USER:
       return { ...state, register: action.payload };
     case LOGIN_USER:
+      //loginSucces : 서버정보 전달(user_action.js 참고)
       return { ...state, loginSucces: action.payload };
     case AUTH_USER:
       return { ...state, userData: action.payload };

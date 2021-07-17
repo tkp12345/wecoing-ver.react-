@@ -8,6 +8,7 @@ const moment = require("moment");
 const videoSchema = mongoose.Schema({
     writer: {
         type:Schema.Types.ObjectId,
+        //User 모델 정보
         ref: 'User'
     },
     title: {
@@ -34,7 +35,7 @@ const videoSchema = mongoose.Schema({
     thumbnail: {
         type: String
     }
-}, { timestamps: true })
+}, { timestamps: true })//업데이트 날짜 
 
  
 

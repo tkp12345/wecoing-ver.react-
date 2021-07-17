@@ -12,9 +12,9 @@ const { Title } = Typography;
 const { Meta } = Card;
 
 function LandingPage() {
-  /*video 정보  state 저장 */
   const [Video, setVideo] = useState([]);
 
+  //비디오 정보 가져오기 
   useEffect(() => {
     Axios.get("/api/video/getVideos").then((response) => {
       if (response.data.success) {
@@ -26,6 +26,7 @@ function LandingPage() {
     });
   }, []);
 
+  //비디오 정보 뿌리기 
   const renderCards = Video.map((video, index) => {
     var minutes = Math.floor(video.duration / 60);
     var seconds = Math.floor(video.duration - minutes * 60);
@@ -33,6 +34,7 @@ function LandingPage() {
 
     return (
       <Col lg={6} md={8} xs={24}>
+        {/* 비디오 정보 출력 */}
         <a href={`/video/${video._id}`}>
           <div style={{ position: "relative" }}>
             <img

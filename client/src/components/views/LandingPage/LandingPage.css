@@ -6,6 +6,7 @@
 }
 .carousel-inner {
   overflow: hidden;
+  width:100%;
 }
 .carousel-item {
   opacity: 0;

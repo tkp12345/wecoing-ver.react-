@@ -16,6 +16,7 @@ import promiseMiddleware from "redux-promise";
 import ReduxThunk from "redux-thunk";
 
 const createStoreWithMiddleware = applyMiddleware(
+  //stroe 에서 promise 와 function 을 받을수있는 설정
   promiseMiddleware,
   ReduxThunk
 )(createStore);
@@ -24,7 +25,8 @@ ReactDOM.render(
   <Provider
     store={createStoreWithMiddleware(
       Reducer,
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      //브라우저에서 리덕스 다루기 위해 사용
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )}
   >
