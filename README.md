@@ -1,3 +1,7 @@
+👨‍💻창업 경진대회 아이디어를 기반으로한 강의 사이트 "wecoing" 제작 (ver VideoPlay)
+---
+<img src = "https://user-images.githubusercontent.com/46067837/107915786-769b2500-6fa8-11eb-91d2-b018499e83bc.JPG" width="900px">
+
 React 와 nodejs 를 사용한 비디오 업로드 페이지 기능  
 --
 ```
@@ -7,7 +11,10 @@ React 와 nodejs 를 사용한 비디오 업로드 페이지 기능
 3.동영상업로드 
 4.동영상실행
 ```
-
+```
+클라이언트 : reactJS 
+서버 : NodeJs , MongoDB
+```
 실행 페이지
 ---
 ![page](https://user-images.githubusercontent.com/46067837/111562701-fdc2ff00-87d9-11eb-9272-1211304e9506.png)
