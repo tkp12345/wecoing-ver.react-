@@ -1,6 +1,6 @@
 👨‍💻창업 경진대회 아이디어를 기반으로한 강의 사이트 "wecoing" 제작 (ver VideoPlay)
 ---
-<img src = "![](https://images.velog.io/images/tkp12345/post/1d460f1d-97ef-4785-bc1c-0c2c15cee9c7/WECODING.jpg)" width="900px">
+<img src = "https://images.velog.io/images/tkp12345/post/1d460f1d-97ef-4785-bc1c-0c2c15cee9c7/WECODING.jpg" width="900px">
 
 React 와 nodejs 를 사용한 비디오 업로드 페이지 기능  
 --
